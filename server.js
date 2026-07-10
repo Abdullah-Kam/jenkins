@@ -29,7 +29,7 @@ app.post('/api/tasks', (req, res) => {
   }
   const task = { id: nextId++, title: title.trim(), done: false };
   tasks.push(task);
-  res.status(201).json(task);
+  res.status(400).json(task);
 });
 
 app.put('/api/tasks/:id', (req, res) => {
